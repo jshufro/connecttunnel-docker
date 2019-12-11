@@ -16,3 +16,5 @@ Log in when prompted.
 
 Configure a proxy extention (like foxyproxy, or something similar) to socks5 127.0.0.1:1080. Make sure to proxy DNS.
 I recommend using the list of domains that connecttunnel prints out after you connect in order to configure your proxy.
+
+Testable with: curl -x socks5h://localhost:1080 http://icanhazip.com

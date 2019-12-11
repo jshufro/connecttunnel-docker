@@ -12,7 +12,7 @@ start_dante() {
 
 mknod /dev/net/tun c 10 200
 start_dante &
-DANTE_MONITOR = $!
+DANTE_MONITOR=$!
 startct --mode console "$@"
 
 # polite shutdown
