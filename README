@@ -1,0 +1,18 @@
+Step 0: Get ConnectTunnel-Linux64.tar from your friendly VPN webpage/admin.
+
+First install docker, if you don't have it:
+
+$ sudo apt-get install docker.io
+
+Build the image:
+
+$ sudo docker build -t startct .
+
+Start an interactive container
+
+$ sudo docker run --cap-add NET_ADMIN --network bridge --publish 1080:1080 -it startct --server SERVER_URL
+
+Log in when prompted.
+
+Configure a proxy extention (like foxyproxy, or something similar) to socks5 127.0.0.1:1080. Make sure to proxy DNS.
+I recommend using the list of domains that connecttunnel prints out after you connect in order to configure your proxy.
